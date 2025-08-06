@@ -25,3 +25,18 @@ function exibirAmigos(){
       lista.appendChild(item);
   }
 }
+
+function pegarIndiceAleatorio(){
+  let indice = parseInt(Math.random() * amigos.length);
+  return amigos[indice];
+}
+
+function sortearAmigo(){
+  let resultado = document.getElementById('resultado');
+  resultado.innerHTML = '';
+
+  const nome = document.createElement("li");
+  nome.textContent = pegarIndiceAleatorio();
+
+  resultado.appendChild(nome);
+}
