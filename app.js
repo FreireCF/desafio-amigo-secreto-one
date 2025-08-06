@@ -8,6 +8,22 @@ function limparCampo(){
 
 function adicionarAmigo(){
   let nome = document.getElementById('amigo').value;
+
+  if(nome === null){
+    alert("Digite um nome válido");
+    return;
+  }
+
+  if(amigos.includes(nome)){
+    alert('Este nome já foi adicionado');
+    return;
+  }
+
+  if (amigos.length < 2) {
+    alert("Adicione pelo menos 2 amigos para realizar o sorteio");
+    return;
+  }
+
   amigos.push(nome);
   limparCampo();
   exibirAmigos();
