@@ -59,6 +59,7 @@ function sortearAmigo(){
 
 function reiniciar(){
   amigos = [];
+  limparCampo();
   document.getElementById('listaAmigos').innerHTML = '';
   document.getElementById('resultado').innerHTML = '';
 }
