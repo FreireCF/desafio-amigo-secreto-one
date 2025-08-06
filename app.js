@@ -52,7 +52,7 @@ function sortearAmigo(){
   resultado.innerHTML = '';
 
   const nome = document.createElement("li");
-  nome.textContent = pegarIndiceAleatorio();
+  nome.textContent = "O(a) amigo(a) sorteado(a) foi " + pegarIndiceAleatorio();
 
   resultado.appendChild(nome);
 }
