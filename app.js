@@ -19,11 +19,6 @@ function adicionarAmigo(){
     return;
   }
 
-  if (amigos.length < 2) {
-    alert("Adicione pelo menos 2 amigos para realizar o sorteio");
-    return;
-  }
-
   amigos.push(nome);
   limparCampo();
   exibirAmigos();
@@ -48,6 +43,11 @@ function pegarIndiceAleatorio(){
 }
 
 function sortearAmigo(){
+  if (amigos.length < 2) {
+    alert("Adicione pelo menos 2 amigos para realizar o sorteio");
+    return;
+  }
+
   let resultado = document.getElementById('resultado');
   resultado.innerHTML = '';
 
@@ -55,4 +55,10 @@ function sortearAmigo(){
   nome.textContent = pegarIndiceAleatorio();
 
   resultado.appendChild(nome);
+}
+
+function reiniciar(){
+  amigos = [];
+  document.getElementById('listaAmigos').innerHTML = '';
+  document.getElementById('resultado').innerHTML = '';
 }
